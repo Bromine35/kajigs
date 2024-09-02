@@ -32,3 +32,25 @@ fetch("../../data/first-message.txt")
 function writePost(data) {
     document.getElementById("main").innerHTML = markdown.toHTML(data);
 }
+
+
+fetch("../../data/threads.json")
+    .then(response => response.json())
+    .then(data => {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const id = urlParams.get('id')
+
+        window.parentname = '';
+        let found = false;
+
+        data.forEach(childArray => {
+            if (childArray.id == id) {
+                document.getElementById("kajig-title").innerHTML = childArray.name
+                found = true;
+            }
+        });
+    })
+    .catch(error => {
+        console.error("Error fetching data:", error);
+    });
