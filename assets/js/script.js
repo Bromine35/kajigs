@@ -9,7 +9,7 @@ fetch(location.pathname + 'data/threads.json')
     data.forEach(object => {
         fulldata += `
         <li class="doc-card">
-            <a href="#" class="doc-title">${object.name}</a>
+            <a href="${location.pathname + "viewer/index.html?id=" + object.id}" class="doc-title">${object.name}</a>
         </li>
         `
 
