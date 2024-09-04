@@ -1,6 +1,6 @@
 
 document.getElementById("list-names-main").innerHTML = "Loading List..."
-fetch(location.pathname + 'data/threads.json')
+fetch('data/threads.json')
 .then(data => data.json())
 .then(data => {
     document.getElementById("list-names-main").innerHTML = ""
@@ -9,7 +9,7 @@ fetch(location.pathname + 'data/threads.json')
     data.forEach(object => {
         fulldata += `
         <li class="doc-card">
-            <a href="${location.pathname + "viewer/index.html?id=" + object.id}" class="doc-title">${object.name}</a>
+            <a href="${"viewer/index.html?id=" + object.id}" class="doc-title">${object.name}</a>
         </li>
         `
 

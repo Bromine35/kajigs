@@ -29,9 +29,14 @@ fetch("../../data/first-message.txt")
         console.error("Error fetching data:", error);
     });
 
-function writePost(data) {
-    document.getElementById("main").innerHTML = markdown.toHTML(data);
-}
+    function writePost(data) {
+        const options = {
+            breaks: true // is this what todo wanted??
+        };
+
+        const html = marked.parse(data, options);
+        document.getElementById("main").innerHTML = html;
+    }
 
 
 fetch("../../data/threads.json")
