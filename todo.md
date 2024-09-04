@@ -16,8 +16,7 @@ also:
 - link the kajig to TN channel
 - add creation date (great more "manual computer labor")
 - (automatically) format the first message posts archive into something that can actually be modified semi easily
-- automatically create a blob with the specific instructions, name of the creator, and title of the kajig in json format for ppl to download as raw.
-- provide archive files download links
+- ~~automatically create a blob with the specific instructions, name of the creator, and title of the kajig in json format for ppl to download as raw. "localkajig"~~ done; this was dumb, just made it txt format and parsed html to formatted txt instead
 
 easier fuckin said than done
 

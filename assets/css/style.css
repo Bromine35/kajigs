@@ -154,6 +154,15 @@
   transition: background-color 0.3s ease;
   flex-grow: 1;
 }
+
+.downl {
+    padding: 5px;
+    color: var(--text);
+    background-color: var(--red-purple);
+    border-radius: 1rem;
+    font-family: "muntu";
+}
+
   .doc-title:hover {
     background-color: rgba(127, 86, 165, 0.3);
   }
