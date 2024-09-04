@@ -17,3 +17,10 @@ fetch('data/threads.json')
 
     document.getElementById('list-names-main').innerHTML = fulldata
 })
+
+
+fetch("data/sitedata.json")
+.then(data => data.json())
+.then(data => {
+    document.getElementById("foother").innerHTML = `Version ${data.version} (FR). <a href="https://github.com/Bromine35/kajigs/">GitHub Repo.</a> Licensed Under the Mozilla Public License 2.0. Made by Bromine35.`
+})
