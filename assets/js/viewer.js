@@ -100,7 +100,7 @@ fetch("../../data/threads.json")
         unparsed = unparsed.replace(/<pre>/g, "");
         unparsed = unparsed.replace(/<\/pre>/g, "");
         
-        window.parsed = btoa(unparsed)
+        window.parsed = unparsed
     }    
 
     function generateText() {
@@ -109,15 +109,14 @@ fetch("../../data/threads.json")
             return;
         }
     
-        let text = atob(window.parsed);
+        let text = window.parsed;
         console.log(text);
         
-        let newText = `
-        Kajig Title: ${window.title}
+        let newText = `Kajig Title: ${window.title}
 
-        --- Kajig Writeup: 
+--- Kajig Writeup: 
 
-        ${text}
+${text}
         `
         const blob = new Blob([newText], { type: "text/plain" });
         const link = document.createElement("a");
